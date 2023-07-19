@@ -28,4 +28,4 @@ jobs:
         git add -A
         timestamp=$(date -u)
         git commit -m "Latest data: ${timestamp}" || exit 0
-        git push https://${{ secrets.GH_TOKEN }}@github.com/amirguterman/ws.git
+        git push https://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@github.com/amirguterman/ws.git
