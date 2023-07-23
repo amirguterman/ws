@@ -19,14 +19,14 @@ jobs:
 
     - name: Set up Git user
       with:
-          github_token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
       run: |-
         git config --global user.name "Amir Guterman"
         git config --global user.email "amirguterman@gmail.com"
 
     - name: Commit and push if it changed
       with:
-          github_token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
       run: |-
         git add -A
         timestamp=$(date -u)
