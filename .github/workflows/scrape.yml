@@ -12,19 +12,21 @@ jobs:
     steps:
     - name: Check out this repo
       uses: actions/checkout@v3
-      with:
-          github_token: ${{ secrets.GH_TOKEN }}
     - name: Fetch latest data
       run: |-
         curl 'https://www.fire.ca.gov/api/sitecore/Incident/GetFiresForMap' \
           -X POST --data-raw 'showFeatured=False' | jq > incidents-june-2023-format.json
 
     - name: Set up Git user
+      with:
+          github_token: ${{ secrets.GH_TOKEN }}
       run: |-
         git config --global user.name "Amir Guterman"
         git config --global user.email "amirguterman@gmail.com"
 
     - name: Commit and push if it changed
+      with:
+          github_token: ${{ secrets.GH_TOKEN }}
       run: |-
         git add -A
         timestamp=$(date -u)
