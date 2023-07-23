@@ -7,40 +7,26 @@ on:
   - cron: '6,26,46 * * * *'
 
 jobs:
-  scheduled:
+  build:
     runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
     - name: Check out this repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
       with:
-        github_token: ${{ secrets.GH_TOKEN }}
-        branch: main
-        force: true
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository
     - name: Fetch latest data
       run: |-
         curl 'https://www.fire.ca.gov/api/sitecore/Incident/GetFiresForMap' \
           -X POST --data-raw 'showFeatured=False' | jq > incidents-june-2023-format.json
-
-    - name: Set up Git user
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GH_TOKEN }}
-        branch: main
-        force: true
-      run: |-
-        git config --global user.name "Amir Guterman"
-        git config --global user.email "amirguterman@gmail.com"
-
-    - name: Commit and push if it changed
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GH_TOKEN }}
-        branch: main
-        force: true
-      run: |-
-        git add -A
+    - name: Commit files
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
         timestamp=$(date -u)
-        git commit -m "Latest data: ${timestamp}" || exit 0
-        git push
+        git commit -a -m "Latest data: ${timestamp}" || exit 0
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GH_TOKEN }}
+        branch: ${{ github.ref }}
