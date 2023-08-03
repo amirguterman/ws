@@ -90,24 +90,6 @@
     "ExternalUrl": ""
   },
   {
-    "Name": "Shell Fire",
-    "Updated": "2023-08-02",
-    "Started": "2023-07-30",
-    "AdminUnit": "CAL FIRE San Luis Obispo Unit",
-    "County": "San Luis Obispo",
-    "Location": "Shell Creek and HWY 58, east of Creston",
-    "AcresBurned": 100,
-    "PercentContained": 95,
-    "Longitude": -120.334625,
-    "Latitude": 35.458459,
-    "Type": null,
-    "UniqueId": "6550e4e3-ef7f-4ebd-87ca-4a4244fdffd2",
-    "Url": "/incidents/2023/7/30/shell-fire/",
-    "StartedDateOnly": null,
-    "IsActive": true,
-    "ExternalUrl": ""
-  },
-  {
     "Name": "York Fire",
     "Updated": "2023-08-01",
     "Started": "2023-08-01",
@@ -124,24 +106,6 @@
     "StartedDateOnly": null,
     "IsActive": true,
     "ExternalUrl": "https://inciweb.nwcg.gov/incident-information/camnp-2023-york-fire"
-  },
-  {
-    "Name": "Haberkern Fire",
-    "Updated": "2023-08-02",
-    "Started": "2023-08-01",
-    "AdminUnit": "Kern County Fire ",
-    "County": "Kern",
-    "Location": " Lebec, South of Bakersfield",
-    "AcresBurned": 35,
-    "PercentContained": 95,
-    "Longitude": -119.988888,
-    "Latitude": 36.7611111,
-    "Type": null,
-    "UniqueId": "1df129dd-265c-450d-a605-b46d82ca0436",
-    "Url": "/incidents/2023/8/1/haberkern-fire/",
-    "StartedDateOnly": null,
-    "IsActive": true,
-    "ExternalUrl": ""
   },
   {
     "Name": "Beale Fire",
@@ -169,7 +133,7 @@
     "County": "Kern",
     "Location": "Round Mountain Road and Eastmont Road, northeast of Bakersfield",
     "AcresBurned": 1540,
-    "PercentContained": 50,
+    "PercentContained": 100,
     "Longitude": -118.875657,
     "Latitude": 35.490591,
     "Type": null,
