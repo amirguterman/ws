@@ -126,24 +126,6 @@
     "ExternalUrl": ""
   },
   {
-    "Name": "East Fire ",
-    "Updated": "2023-08-02",
-    "Started": "2023-08-01",
-    "AdminUnit": "Kern County Fire Department",
-    "County": "Kern",
-    "Location": "Round Mountain Road and Eastmont Road, northeast of Bakersfield",
-    "AcresBurned": 1540,
-    "PercentContained": 100,
-    "Longitude": -118.875657,
-    "Latitude": 35.490591,
-    "Type": null,
-    "UniqueId": "29d92f74-bbef-483e-9cf5-4f45aa82a8ba",
-    "Url": "/incidents/2023/8/1/east-fire/",
-    "StartedDateOnly": null,
-    "IsActive": true,
-    "ExternalUrl": ""
-  },
-  {
     "Name": "Stanley Fire",
     "Updated": "2023-08-02",
     "Started": "2023-08-02",
